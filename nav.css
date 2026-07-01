@@ -1,0 +1,146 @@
+:root {
+  --police: cursive;
+  --couleur-body: #2e1f26;
+  --header-backg-color: #c87740;
+  --couleur-font: #2e1f26;
+  --menu-color: #b5581a;
+}
+/* ============BASE=========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--couleur-body);
+  color: var(--couleur-font);
+  font-family: var(--police);
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+  color: var(--couleur-body);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* ======================HEADER & NAV========================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--header-backg-color);
+  width: 100%;
+  z-index: 100;
+}
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+img {
+  width: 50px;
+  border: 3px solid var(--couleur-body);
+  box-shadow: 2px 2px 3px var(--couleur-body);
+  border-radius: 40%;
+}
+.close_but,
+.tog_but {
+  display: flex;
+  cursor: pointer;
+  font-size: 20px;
+}
+/* NAVIGATION POUR MOBILES*/
+@media screen and (max-width: 1150px) {
+  .nav_menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 7rem 2rem 7rem 10rem;
+    background-color: var(--menu-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.4s;
+  }
+}
+.nav_ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.close_but {
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+}
+.social {
+  display: flex;
+  column-gap: 2rem;
+  align-self: flex-end;
+}
+.social_link {
+  transition: color 0.4s;
+}
+.social_link:hover {
+  color: var(--header-backg-color);
+}
+.nav_list {
+  transition: color 0.4s;
+}
+.nav_list:hover {
+  color: #c87740;
+}
+
+.show_menu {
+  left: 0;
+}
+/* NAVIGATION POUR GRAND APPAREIL */
+@media screen and (min-width: 1150px) {
+  .tog_but,
+  .close_but {
+    display: none;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-inline: 2rem;
+  }
+  .nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav_ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2.5rem;
+    position: absolute;
+    right: 28rem;
+  }
+  .nav_list,
+  .social_link {
+    transition: color;
+  }
+  .nav_list:hover,
+  .social_link:hover {
+    color: #382b31;
+  }
+}
