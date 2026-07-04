@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap");
 :root {
-  --police: cursive;
+  --police: "Edu NSW ACT Cursive", cursive;
   --couleur-body: #2e1f26;
   --header-backg-color: #c87740;
   --couleur-font: #2e1f26;
